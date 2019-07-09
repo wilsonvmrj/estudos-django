@@ -7,23 +7,19 @@
     <title>Aprendendos django com as menindas !!! :D</title>
 </head>
 <body>
+    
     <div>
         <h1><a href="/">Blog Django Girls</a></h1>
     </div>
+    {% for post in posts %}
     <div>
-        <p>publicado: 08/07/2019, 18:44</p>
-        <h2><a href=""> Meu primeiro post</a></h2>
-        <p>Somente um post como teste. Nao serve para muita coisa só como exmplo mesmo, isso para testes.    </p>
-
+        <p>Publicado em: {{ post.published_date }}  </p>
+        <h1> <a href="">{{ post.title }}</a>   </h1>
+        <p>  {{ post.text|linebreaksbr }} </p>
+        {{ post }}        
     </div>
 
-    <div>
-
-            <p>publicado: 08/07/2019, 18:44</p>
-            <h2><a href=""> Meu segundo post</a></h2>
-            <p>Somente um post como teste. Nao serve para muita coisa só como exmplo mesmo, isso para testes.    </p>
-    </div>
-
+    {% endfor %}
 
 </body>
 </html>
