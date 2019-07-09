@@ -1,1 +1,2 @@
 https://tutorial.djangogirls.org/pt/django_orm/
+https://tutorial.djangogirls.org/pt/template_extending/
